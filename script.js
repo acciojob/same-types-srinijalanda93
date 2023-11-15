@@ -4,9 +4,15 @@ function isSameType(value1, value2) {
     return true;
   }
 
+  // Check if one of the values is NaN
+  if (isNaN(value1) || isNaN(value2)) {
+    return false;
+  }
+
   // Check if the types are the same
   return typeof value1 === typeof value2;
 }
+
 
 // Example usage with user input through prompts
 let value1 = prompt("Enter the first value:");
